@@ -7,18 +7,19 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.println("\n--- Equation Program ---");
+            System.out.println("\n========== Equation Program ==========");
             System.out.println("1. Calculate Superlative Equation");
             System.out.println("2. Calculate Quadratic Equation");
             System.out.println("3. Exit");
             System.out.print("Please choice one option: ");
             int option = getValidInt(scanner);
             if (option == 3) {
-                System.out.println("Exiting program.");
+                System.out.println("Exiting program...");
                 break;
             }
             switch (option) {
                 case 1:
+                    System.out.println("\n---- Calculate Equation ----");
                     System.out.print("Enter A: ");
                     double a1 = getValidDouble(scanner);
                     System.out.print("Enter B: ");
@@ -27,6 +28,7 @@ public class Main {
                     printEvenOddSquare((int)a1, (int)b1);
                     break;
                 case 2:
+                    System.out.println("\n----- Calculate Quadratic Equation -----");
                     System.out.print("Enter A: ");
                     double a2 = getValidDouble(scanner);
                     System.out.print("Enter B: ");
@@ -75,7 +77,7 @@ public class Main {
                 }
         }
         if (evenList.length() > 0) {
-                evenList.setLength(evenList.length() - 2); // Remove trailing comma and space
+                evenList.setLength(evenList.length() - 2); 
                 System.out.print("Number is Even: " + evenList);
         } else {
             System.out.print("Number is Even: (none)");

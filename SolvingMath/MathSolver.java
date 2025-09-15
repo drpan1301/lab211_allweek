@@ -12,8 +12,8 @@ public class MathSolver {
 
     public static boolean isSquare(int n) {
         if (n < 0) return false;
-        int sqrt = (int) Math.sqrt(n);
-        return sqrt * sqrt == n;
+        int root = (int) Math.sqrt(n);
+        return root * root == n;
     }
 
     public static String solveLinear(double a, double b) {
