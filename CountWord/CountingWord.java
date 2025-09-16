@@ -26,3 +26,4 @@ public class CountingWord {
 		return charCount;
 	}
 }
+
