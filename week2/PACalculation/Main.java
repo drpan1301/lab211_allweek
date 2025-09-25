@@ -1,8 +1,7 @@
-package BMICalculation;
+package PACalculation;
 
-import java.util.Scanner;
-
-public class Main {
+public class ShapeExponent {
+    
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -52,50 +51,4 @@ public class Main {
             
         }
     }
-
-    private static double getValidDoubleBMI(Scanner scanner,int type) {
-        while (!scanner.hasNextDouble()) {
-            System.out.println("BMI is digit");
-            if(type == 1){
-                System.out.print("Enter Weight(kg): ");
-            } else {
-                System.out.print("Enter Height(cm): ");
-            }
-            scanner.next();
-        }
-        return scanner.nextDouble();
-    }
-
-    private static double getValidDoubleNormal(Scanner scanner) {
-        while (!scanner.hasNextDouble()) {
-            System.out.println("Invalid input. Please enter a valid number: ");
-            scanner.next();
-        }
-        return scanner.nextDouble();
-    }
-
-    private static int getValidInt(Scanner scanner) {
-        while (!scanner.hasNextInt()) {
-            System.out.print("Invalid input. Please enter a valid integer: ");
-            scanner.next();
-        }
-        return scanner.nextInt();
-    }
-
-    public static String getValidOperator(Scanner scanner) {
-        while (true) {
-            System.out.print("Enter operator: ");
-            String op = scanner.next();
-            if (op.equals("=")) {
-                return op;
-            }
-            if ("+-*/^".contains(op) && op.length() == 1) {
-                return op;
-            } else {
-                System.out.println("Please input (+, -, *, /, ^)");
-            }
-        }
-    }
-
-
 }
